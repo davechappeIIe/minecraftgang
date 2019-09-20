@@ -1,0 +1,232 @@
+@echo off
+title Minecraft Gang Authentication
+color 0a
+echo WELCOME TO THE MINECRAFT GANG AUTHENTICATOR!
+pause
+:error
+cls
+echo PLEASE ENTER YOUR NAME.
+set /p name=
+cls
+
+if %name%==jacob goto Jacob
+if %name%==anthony goto Anthony
+if %name%==gabe goto Gabe
+if %name%==valentina goto Valentina
+if %name%==arthur goto Arthur
+if %name%==logan goto Logan
+if %name%==xavier goto Xavier
+if %name%==brisa goto Brisa
+if %name%==noah goto Noah
+if %name%==lorenzo goto Lorenzo
+if %name%==Jacob goto Jacob
+if %name%==Anthony goto Anthony
+if %name%==Gabe goto Gabe
+if %name%==Valentina goto Valentina
+if %name%==Arthur goto Arthur
+if %name%==Logan goto Logan
+if %name%==Xavier goto Xavier
+if %name%==Brisa goto Brisa
+if %name%==Noah goto Noah
+if %name%==Lorenzo goto Lorenzo
+goto error
+
+:je
+:Jacob
+
+echo Enter your password, Jacob.
+set /p jp=
+cls
+
+if %jp%==bruh goto Jacob2
+cls
+goto je
+
+:Jacob2
+cls
+echo Welcome, JACOB!
+pause >nul
+goto end
+
+:ae
+:Anthony
+
+echo Enter your password, Anthony.
+set /p ap=
+cls
+
+if %ap%==starr99 goto Anthony2
+cls
+goto ae
+
+:Anthony2
+cls
+echo Welcome, Anthony
+pause >nul
+goto end
+
+:ge
+:Gabe
+
+echo Enter your password, Gabe.
+set /p gp=
+cls
+
+if %gp%==i am smelly goto Gabe2
+cls
+goto ge
+
+:Gabe2
+cls
+echo Welcome, Gabe
+pause >nul
+goto end
+
+:ve
+:Valentina
+
+echo Enter your password, Valentina.
+set /p vp=
+cls
+
+if %vp%==anything goto Valentina2
+cls
+goto ve
+
+:Valentina2
+cls
+echo Welcome, Valentina
+pause >nul
+goto end
+
+:are
+:Arthur
+
+echo Enter your password, Arthur.
+set /p arp=
+cls
+
+if %arp%==i am fat goto Arthur2
+cls
+goto are
+
+:Arthur2
+cls
+echo Welcome, Arthur
+pause >nul
+goto end
+
+:le
+:Logan
+
+echo Enter your password, Logan.
+set /p lp=
+cls
+
+if %lp%==lc0418 goto Logan2
+cls
+goto le
+
+:Logan2
+cls
+echo Welcome, Logan
+pause >nul
+goto end
+
+:xe
+:Xavier
+
+echo Enter your password, Xavier.
+set /p xp=
+cls
+
+if %xp%==12321@me goto Xavier2
+cls
+goto xe
+
+:Xavier2
+cls
+echo Welcome, Xavier.
+pause >nul
+goto end
+
+:be
+:Brisa
+
+echo Enter your password, Brisa.
+set /p bp=
+cls
+
+if %bp%==furry goto Brisa2
+cls
+goto be
+
+:Brisa2
+cls
+echo Welcome, Brisa.
+pause >nul
+goto end
+
+:ne
+:Noah
+
+echo Enter your password, Noah.
+set /p np=
+cls
+
+if %np%==fortnite goto Noah2
+cls
+goto ne
+
+:Noah2
+cls
+echo Welcome, Noah.
+pause >nul
+goto end
+
+:loe
+:Lorenzo
+
+echo Enter your password, Lorenzo.
+set /p lop=
+cls
+
+if %lop%==fat goto Lorenzo2
+cls
+goto loe
+
+:Lorenzo2
+cls
+echo Welcome, Lorenzo.
+pause >nul
+goto end
+
+:end
+cls
+echo %name%'s Terminal
+echo.
+echo.
+echo.
+echo.
+echo.
+echo Welcome to your terminal!
+echo.
+echo in your terminal, you can use the commands below by typing them in:
+echo.
+echo 1) Back to Menu
+echo 2) Discord Link
+set /p menuchoice=
+cls
+
+if %menuchoice%==1 goto error
+if %menuchoice%==2 goto discord
+
+:discord
+cls
+echo The discord link is https://discord.gg/yRmHAwq
+echo.
+echo.
+echo.
+echo press enter to return to your terminal.
+pause >nul
+goto end
