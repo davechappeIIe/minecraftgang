@@ -1,0 +1,113 @@
+@ECHO OFF
+set menuchoice=
+set textcolors=
+set settings=
+title BIZARRE ADVENTURE
+echo      j o j      j o j o j o j
+echo      o    o    o             o
+echo      j    j    j   j o j o   j
+echo      o    o    o   o     j   o
+echo      j    j    j   j     o   j
+echo      o    o    o   o     j   o
+echo      j    j    j   j     o   j
+echo      o    o    o   o     j   o
+echo     j     j    j   j     o   j
+echo  ojo     o     o   o j o j   o   BIZARRE ADVENTURE
+echo o       j      j             j    BY: JACOB T.
+echo  ojojojo        o j o j o j o       11/14/19
+echo.
+echo      j o j      j o j o j o j
+echo      o    o    o             o
+echo      j    j    j   j o j o   j
+echo      o    o    o   o     j   o
+echo      j    j    j   j     o   j
+echo      o    o    o   o     j   o
+echo      j    j    j   j     o   j
+echo      o    o    o   o     j   o
+echo     j     j    j   j     o   j
+echo  ojo     o     o   o j o j   o
+echo o       j      j             j
+echo  ojojojo        o j o j o j o
+PING localhost -n 2 >NUL
+color 09
+PING localhost -n 2 >NUL
+color 02
+PING localhost -n 2 >NUL
+color 0c
+PING localhost -n 2 >NUL
+color f0
+PING localhost -n 3 >NUL
+color 0f
+echo.
+echo Press enter to start.
+pause >nul
+:MENU
+cls
+echo MMMM   MMMM  EEEEEE  NN   N  U    U
+echo M  M  M   M  E       N N  N  U    U
+echo M   MM    M  EEEEE   N  N N  U    U
+echo M         M  E       N   NN  U    U
+echo MMM     MMM  EEEEEE  N    N   UUUU
+echo.
+echo.
+echo.
+echo.
+echo.
+echo 1) Start Game
+echo 2) Help
+echo 3) Credits
+set /p menuchoice=
+cls
+if %menuchoice%==1 goto GAME
+if %menuchoice%==2 goto HELP
+if %menuchoice%==3 goto CREDITS
+
+:GAME
+set menuchoice=
+echo Enter your bizarre name.
+set /p name=
+cls
+echo $name%... a good name!
+PING localhost -n 2 >NUL
+cls
+echo Your story starts now...
+PING localhost -n 4 >NUL
+cls
+goto SOG
+:CREDITS
+set menuchoice=
+echo MADE BY JACOB THRALL
+echo SHOUTOUT TO THE FORK GANG
+echo AND THE LIBRARY CULT
+echo.
+echo press enter to return to menu.
+pause >nul
+cls
+goto MENU
+:HELP
+set menuchoice=
+echo NO HELP SINCE GAME IS NOT YET MADE.
+pause >nul
+cls
+goto MENU
+
+:SOG
+echo You wake up in Morioh.
+echo.
+echo.
+echo You found yourself in a trash can. Your memory is hazy, but you manage to remember how you got here.
+echo When you decided to pick a fight with a local mobster.
+echo
+echo ...Needless to say it didn't end well.
+echo You try to stand up, but fall to the bottom of the dumpster and fall flat ontop of a hard and cold item.
+echo.
+echo "Great..." you think, "I landed in shit."
+echo You stand up and turn around to find you landed ontop of a peculiar stone object...
+echo.
+echo Do you take it with you?
+echo y/n?
+set /p choice=
+if %choice%==y goto grabmask
+if %choice%==N
+if %choice%==Y goto grabmask
+if %choice%==n
