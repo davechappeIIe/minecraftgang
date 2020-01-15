@@ -1,0 +1,262 @@
+@ECHO OFF
+:title
+set knife=
+set menuchoice=
+set textcolors=
+set settings=
+set choice=
+title BIZARRE ADVENTURE
+echo      j o j      j o j o j o j
+echo      o    o    o             o
+echo      j    j    j   j o j o   j
+echo      o    o    o   o     j   o
+echo      j    j    j   j     o   j
+echo      o    o    o   o     j   o
+echo      j    j    j   j     o   j
+echo      o    o    o   o     j   o
+echo     j     j    j   j     o   j
+echo  ojo     o     o   o j o j   o   BIZARRE ADVENTURE
+echo o       j      j             j    BY: JACOB T.
+echo  ojojojo        o j o j o j o       11/14/19
+echo.
+echo      j o j      j o j o j o j
+echo      o    o    o             o
+echo      j    j    j   j o j o   j
+echo      o    o    o   o     j   o
+echo      j    j    j   j     o   j
+echo      o    o    o   o     j   o
+echo      j    j    j   j     o   j
+echo      o    o    o   o     j   o
+echo     j     j    j   j     o   j
+echo  ojo     o     o   o j o j   o
+echo o       j      j             j
+echo  ojojojo        o j o j o j o
+PING localhost -n 2 >NUL
+color 09
+PING localhost -n 2 >NUL
+color 02
+PING localhost -n 2 >NUL
+color 0c
+PING localhost -n 2 >NUL
+color f0
+PING localhost -n 3 >NUL
+color 0f
+echo.
+echo Press enter to start.
+pause >nul
+:MENU
+cls
+echo MMMM   MMMM  EEEEEE  NN   N  U    U
+echo M  M  M   M  E       N N  N  U    U
+echo M   MM    M  EEEEE   N  N N  U    U
+echo M         M  E       N   NN  U    U
+echo MMM     MMM  EEEEEE  N    N   UUUU
+echo.
+echo.
+echo.
+echo.
+echo.
+echo 1) Start Game
+echo 2) Help
+echo 3) Credits
+set /p menuchoice=
+cls
+if %menuchoice%==1 goto GAME
+if %menuchoice%==2 goto HELP
+if %menuchoice%==3 goto CREDITS
+set menuchoice=
+goto MENU
+
+:DEAD
+echo You are dead.
+echo.
+echo Your game will now restart...
+PING localhost -n 4 >NUL
+goto title
+
+:GAME
+set menuchoice=
+echo Enter your bizarre name.
+set /p name=
+cls
+echo %name%... a good name!
+PING localhost -n 2 >NUL
+cls
+echo Your story starts now...
+PING localhost -n 4 >NUL
+cls
+goto SOG
+:CREDITS
+set menuchoice=
+echo MADE BY JACOB THRALL
+echo SHOUTOUT TO THE FORK GANG
+echo AND THE LIBRARY CULT
+echo.
+echo press enter to return to menu.
+pause >nul
+cls
+goto MENU
+:HELP
+set menuchoice=
+echo NO HELP SINCE GAME IS NOT YET MADE.
+pause >nul
+cls
+goto MENU
+
+:SOG
+echo You wake up in Italy.
+echo.
+echo.
+echo You found yourself in a trash can. Your memory is hazy, but you manage to remember how you got here.
+echo When you decided to pick a fight with a local mobster.
+echo
+echo ...Needless to say it didn't end well.
+echo You try to stand up, but fall to the bottom of the dumpster and fall flat ontop of a hard and cold item.
+echo.
+echo "Great..." you think, "I landed in shit."
+echo You stand up and turn around to find you landed ontop of a knife. You're lucky it didn't pierce your skin.
+echo.
+echo Do you take it with you?
+echo y/n?
+set /p choice=
+cls
+if %choice%==y goto grabknife
+if %choice%==N goto leaveknife
+if %choice%==Y goto grabknife
+if %choice%==n goto leaveknife
+set choice=
+goto SOG
+
+:leaveknife
+set knife=no
+echo You decided to leave the knife.
+pause >nul
+cls
+goto bruh
+:grabknife
+set knife=yes
+echo You decided to grab the knife.
+pause >nul
+cls
+
+:bruh
+set choice=
+echo You stood up and hopped out of the trash can, your lack of pants visible to everyone.
+echo Immediately you walk through the alley and in from the back door of the italian restauraunt it leads to.
+echo.
+echo As you're walking in, you are stopped by one of the gangsters who left you in the trash can.
+echo Apparently, he also decided to eat in this restauraunt.
+echo.
+echo He speaks to you, "Get out of my restaurant."
+echo Not only is his tone condescending he also spits in your face.
+echo.
+echo How do you handle this?
+echo.
+echo 1) Take him on with your bare fists!
+echo 2) Use your knife to stab him in the chest. (needs knife)
+echo 3) Flee the restauraunt.
+set /p choice=
+cls
+if %choice%==1 goto fist
+if %choice%==2 goto stabbycheck
+if %choice%==3 goto runlol
+goto bruh
+
+:fist
+echo You look at the gangster and tell him:
+echo "You fuck off! Do you know who I am?!"
+echo He laughs.
+echo.
+echo "MY NAME IS %name% AND I HAVE NO PANTS!"
+echo You blindly charge at him with your fists.
+echo.
+echo He shoots you upside the head and you die. Maybe next time you should learn martial arts before using your fists.
+pause >nul
+cls
+goto DEAD
+
+:stabbycheck
+if %knife%==yes goto stabby
+goto bruh
+
+:stabby
+echo You take a run and stab the gangster in the throat with your knife.
+echo You better start running because EVERYONE saw that.
+echo but first... you take the gangsters pants and put them on, leaving the knife behind.
+echo At least you have pants now.
+pause >nul
+set knife=
+cls
+goto runlol
+
+:runlol2
+echo You immediately run from the restauraunt as fast as you can.
+echo Because you're so stupid, you trip and your knife impales you in the chest as you're running.
+echo Maybe next time, don't run away with a knife in your hands.
+pause >nul
+cls
+goto DEAD
+
+:runlol
+if %knife%==yes goto runlol2
+echo You immediately run from the restauraunt as fast as you can.
+echo.
+echo As you're leaving, you realize that you're running across town square with 2 angry gangsters chasing you.
+echo There are tons of people in the town square, all parting the crowd to make way for your ass beating.
+echo.
+echo You see a man in a bright pink hoodie signaling for you to run into a nearby alley.
+echo What will you do?
+echo.
+echo 1) Enter alley.
+echo 2) Fight the gangsters like a true gangstar
+set /p choice=
+cls
+if %choice%==1 goto alleyenter
+if %choice%==2 goto assbeating
+set choice=
+goto runlol
+pause >nul
+
+:assbeating
+echo You decide to run into the gangsters like an absolute badass.
+echo You would be a legend if it werent for you imploding into a billion pieces without even managing to touch them.
+echo Now, you can walk into your next life with the honor of dying to an enemy stand user.
+pause >nul
+goto DEAD
+
+:alleyenter
+echo You decide to enter the alley with the suspiciously homo looking man.
+echo.
+echo As soon as you walk in, a wall closes off the alley and blocks the 2 gangsters from entering.
+echo Confused as to how any of this is working, you turn to your friend in pink who's holding a weird pose.
+echo.
+echo "Wow. You're kinda weird." you say.
+echo he replies, "I like it that way ;)"
+echo.
+echo "Either way," he says. "If you're gonna live a life where you keep getting encounters with the mafia..."
+echo "You're gonna need a stand."
+echo.
+echo Make your choice;
+echo.
+echo 1) I would love a stand.
+echo 2) Nah sounds kinda gay.
+set /p choice=
+cls
+if %choice%==1 goto standopowa
+if %choice%==2 goto dielikeaclown
+set choice=
+goto :alleyenter
+
+:dielikeaclown
+echo "Nah, sounds kinda gay."
+echo.
+echo He looks at you with disapproval, before tearing your tiny body in half.
+echo "Sorry, can't have everyone knowing about stands."
+echo.
+echo He walks away, leaving your corpse in the mud for the rats.
+pause >nul
+goto DEAD
+
+:standopowa
+echo DEMO IS OVER FOR NOW OMG IM TIRED
+pause >nul
